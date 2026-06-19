@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>语音情报简报｜2026-06-19</title>
+<style>
+:root{--ink:#17211d;--muted:#64706b;--paper:#f5f2e9;--card:#fffdf7;--line:#d9d4c8;--accent:#176b57;--warm:#c85e35}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif;line-height:1.7}a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}.page{max-width:1080px;margin:auto;padding:52px 24px 80px}header{border-top:8px solid var(--ink);padding:32px 0 28px;border-bottom:1px solid var(--ink)}.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:750}h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(38px,7vw,76px);line-height:1.05;letter-spacing:-.04em;margin:16px 0}.window{font-variant-numeric:tabular-nums;color:var(--muted)}.editor-note{display:grid;grid-template-columns:110px 1fr;gap:24px;margin:28px 0 0}.editor-note strong{color:var(--warm)}.editor-note p{margin:0;font-size:18px}section{margin-top:54px}.section-title{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:18px}.section-title span{color:var(--warm);font:700 13px Georgia}.section-title h2{font:700 26px Georgia,"Songti SC",serif;margin:0;flex:1}.section-title em{font-style:normal;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card,.mini-card{background:var(--card);border:1px solid var(--line);padding:24px;box-shadow:0 8px 28px rgba(23,33,29,.04)}.card-head,.card-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.rank{font:700 22px Georgia;color:var(--warm)}.kind{font-size:12px;font-weight:750;letter-spacing:.08em;color:var(--accent)}.date{font-size:11px;color:var(--muted);margin-left:auto}h3{font:700 23px/1.35 Georgia,"Songti SC",serif;margin:14px 0 10px}.summary{font-size:16px}dl{display:grid;grid-template-columns:84px 1fr;gap:8px 12px;border-top:1px solid var(--line);padding-top:16px;margin:18px 0}dt{color:var(--muted);font-size:12px;font-weight:750}dd{margin:0;font-size:14px}.card-foot{justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:12px}.tag{display:inline-block;padding:2px 8px;background:#e3eee9;color:var(--accent);margin:2px 5px 2px 0}.minor-link{margin-left:12px;color:var(--muted)}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.mini-card h3{font-size:19px}.mini-card p{font-size:14px}.reason{border-left:3px solid var(--warm);padding-left:12px}.coverage{color:var(--muted);font-size:13px}footer{margin-top:58px;border-top:1px solid var(--ink);padding-top:18px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}@media(max-width:760px){.grid,.mini-grid{grid-template-columns:1fr}.editor-note{grid-template-columns:1fr;gap:4px}.page{padding:28px 16px 54px}h1{font-size:44px}footer{display:block}}
+</style></head><body><main class="page"><header><div class="eyebrow">Voice Intelligence Briefing</div><h1>语音情报简报｜2026-06-19</h1><div class="window">观察窗口：2026-06-17T12:00:19+08:00 至 2026-06-19T12:00:19+08:00</div><div class="editor-note"><strong>编辑判断</strong><p>本期可信发布集中于研究侧：流式语音处理开始从固定低延迟转向可配置或零前瞻设计，TTS、变声和音频大模型评测则更重视异常语音、上下文利用及细粒度控制。</p></div><p class="coverage">严格核验后收录10条。候选清单主要由论文和新数据集构成；定向补充搜索受公开搜索接口访问限制，未发现可充分核验的商业产品或成熟开源工具，因此本期研究内容占比较高。未发现符合回看规则的明确窗口内触发事件。</p></header><section><div class="section-title"><span>01</span><h2>窗口内首次发布</h2><em>10 条</em></div><div class="grid">
+    <article class="card">
+      <div class="card-head"><span class="rank">01</span><span class="kind">论文</span><span class="date">2026-06-18T14:14:14Z</span></div>
+      <h3>RTFree-F5：无需参考文本的流匹配TTS</h3>
+      <p class="summary">RTFree-F5用连续自监督语音表征和轻量适配器替代F5-TTS推理时所需的参考语音文本，同时复用预训练检查点。论文报告其在构音障碍语音上将WER从24.6%降至10.4%。</p>
+      <dl><dt>为什么重要</dt><dd>它移除了零样本TTS对外部ASR的依赖，尤其有利于口音或言语障碍等转写容易失效的场景。</dd><dt>适合谁</dt><dd>研究无文本参考的零样本TTS、辅助沟通和异常语音合成的团队。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">TTS</span><span class="tag">流匹配</span><span class="tag">零样本语音</span></div><div><a href="https://arxiv.org/abs/2606.20266v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.20266">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">02</span><span class="kind">论文</span><span class="date">2026-06-18T13:32:57Z</span></div>
+      <h3>Zero-VC：零前瞻流式声音转换</h3>
+      <p class="summary">Zero-VC把说话人匿名化用作音色扰动机制，在抑制音色泄漏的同时保留韵律信息，以实现不依赖未来帧的流式零样本声音转换。</p>
+      <dl><dt>为什么重要</dt><dd>零前瞻设计直接针对实时变声的算法延迟，同时把匿名化与音色解耦统一到一个训练目标中。</dd><dt>适合谁</dt><dd>实时变声、隐私保护语音和低延迟声音克隆研究者。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">声音转换</span><span class="tag">声音克隆</span><span class="tag">流式</span><span class="tag">隐私</span></div><div><a href="https://arxiv.org/abs/2606.20218v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.20218">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">03</span><span class="kind">论文</span><span class="date">2026-06-18T01:28:31Z</span></div>
+      <h3>LaCo-SENet：延迟可配置的流式语音增强</h3>
+      <p class="summary">LaCo-SENet通过非对称时间填充、双缓冲流处理和选择性状态更新，在同一框架中配置12.5至75毫秒的算法延迟；论文在固定137万参数规模下报告延迟增加时PESQ由3.35升至3.43。</p>
+      <dl><dt>为什么重要</dt><dd>它把因果或非因果的二选一变成连续可调的延迟质量权衡，便于针对终端算力和交互要求部署。</dd><dt>适合谁</dt><dd>耳机、会议、实时通信和端侧降噪系统开发者。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">语音增强</span><span class="tag">降噪</span><span class="tag">流式</span><span class="tag">低延迟</span></div><div><a href="https://arxiv.org/abs/2606.19688v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19688">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">04</span><span class="kind">论文</span><span class="date">2026-06-17T22:16:13Z</span></div>
+      <h3>RIVET：具幂等约束的稳健声音属性编辑</h3>
+      <p class="summary">RIVET为年龄、性别等声音属性编辑加入幂等目标，使同一编辑重复执行后结果保持稳定，并以此降低大规模语音数据中噪声标签的影响。</p>
+      <dl><dt>为什么重要</dt><dd>幂等约束为声音编辑提供了无需精确标签清洗的稳健化路径，也有助于减少多次处理造成的声音漂移。</dd><dt>适合谁</dt><dd>研究可控声音编辑、匿名化和带噪语音标注学习的团队。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">声音编辑</span><span class="tag">声音克隆</span><span class="tag">说话人身份</span></div><div><a href="https://arxiv.org/abs/2606.19629v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19629">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">05</span><span class="kind">技术趋势</span><span class="date">2026-06-17T18:00:08Z</span></div>
+      <h3>全双工语音对话系统统一分类框架</h3>
+      <p class="summary">该综述用L0至L3架构层级、时间关系与意图及响应组成的交互本体，以及决策状态机，区分当前被笼统称为“全双工”的不同语音对话能力。</p>
+      <dl><dt>为什么重要</dt><dd>统一术语可以帮助团队明确打断、抢话、回声和持续监听等能力究竟由哪一层实现，避免仅凭“全双工”标签比较系统。</dd><dt>适合谁</dt><dd>设计实时语音代理架构、评测指标或产品需求的团队。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">实时语音对话</span><span class="tag">全双工</span><span class="tag">语音代理</span></div><div><a href="https://arxiv.org/abs/2606.19453v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19453">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">06</span><span class="kind">论文</span><span class="date">2026-06-17T17:51:50Z</span></div>
+      <h3>ScenA：参考声音驱动的多说话人音频场景生成</h3>
+      <p class="summary">ScenA在文本到音频流匹配基础模型上加入多段参考声音和自由文本提示，可生成包含背景噪声、房间声学、重叠对话及副语言事件的多说话人场景，无需逐轮说话人标签。</p>
+      <dl><dt>为什么重要</dt><dd>它把声音克隆从干净的单人语音扩展到完整对话场景，为仿真数据和沉浸式内容生成提供新路线。</dd><dt>适合谁</dt><dd>多说话人合成、对话仿真、影视音频和语音代理数据生成研究者。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">多说话人</span><span class="tag">声音克隆</span><span class="tag">音频生成</span></div><div><a href="https://arxiv.org/abs/2606.19325v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19325">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">07</span><span class="kind">论文</span><span class="date">2026-06-17T15:40:53Z</span></div>
+      <h3>DASH：面向噪声鲁棒ASR的双视图自蒸馏</h3>
+      <p class="summary">DASH从干净与含噪配对视图中蒸馏多层编码器表征，并约束原型分配分布的一致性；论文报告其在LibriSpeech多种噪声条件下改善识别，同时保持干净语音准确率。</p>
+      <dl><dt>为什么重要</dt><dd>该方法直接针对噪声增强训练常见的“抗噪提升、干净语音退化”权衡。</dd><dt>适合谁</dt><dd>需要提升真实环境鲁棒性又不能牺牲干净语音表现的ASR团队。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">ASR</span><span class="tag">自蒸馏</span><span class="tag">噪声鲁棒性</span></div><div><a href="https://arxiv.org/abs/2606.19203v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19203">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">08</span><span class="kind">数据集</span><span class="date">2026-06-17T14:59:37Z</span></div>
+      <h3>IndicContextEval：八种印度语言的音频大模型上下文评测</h3>
+      <p class="summary">IndicContextEval包含555名说话者、八种印度语言、23个专业领域的56小时自然语音，并用七级提示设置测试音频大模型是否真正利用领域描述、实体列表和原生文字等上下文。</p>
+      <dl><dt>为什么重要</dt><dd>它能区分模型使用提示上下文与依赖预训练记忆，为上下文偏置ASR和音频大模型提供更严格的多语言评测。</dd><dt>适合谁</dt><dd>开发多语言Audio LLM、实体偏置ASR和提示词评测的团队。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">音频大模型</span><span class="tag">ASR</span><span class="tag">评测集</span><span class="tag">印度语言</span></div><div><a href="https://arxiv.org/abs/2606.19157v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.19157">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">09</span><span class="kind">数据集</span><span class="date">2026-06-17T12:07:20Z</span></div>
+      <h3>SingFox：多语言歌声深伪检测语料库</h3>
+      <p class="summary">SingFox面向合成歌声检测与来源追踪，设置六类评测轨道，覆盖20种语言、1150名歌手和超过113802段音频，总时长超过126.32小时。</p>
+      <dl><dt>为什么重要</dt><dd>现有语音深伪检测数据通常偏向说话语音；该语料将语言、曲风和生成方法变化纳入歌声伪造的跨域评测。</dd><dt>适合谁</dt><dd>歌声深伪检测、音频取证和合成内容溯源研究者。</dd><dt>成熟度</dt><dd>研究原型</dd></dl>
+      <div class="card-foot"><div><span class="tag">数据集</span><span class="tag">歌声合成</span><span class="tag">深伪检测</span><span class="tag">音频取证</span></div><div><a href="https://arxiv.org/abs/2606.18985v1">arXiv ↗</a><a class="minor-link" href="https://arxiv.org/pdf/2606.18985">佐证来源</a></div></div>
+    </article>
+    <article class="card">
+      <div class="card-head"><span class="rank">10</span><span class="kind">数据集</span><span class="date">2026-06-19T01:43:07.000Z</span></div>
+      <h3>TTSDistil2：越南语新闻单说话人语音数据集</h3>
+      <p class="summary">TTSDistil2在Hugging Face公开了面向越南语TTS与ASR的新闻语音数据，提供原始及规范化文本、转写、风格、说话人、时长和音频字段，采用CC BY 4.0许可。</p>
+      <dl><dt>为什么重要</dt><dd>结构化的文本规范化与音频字段便于直接用于越南语语音合成、识别或知识蒸馏实验，但目前下载量和社区验证均有限。</dd><dt>适合谁</dt><dd>需要越南语新闻域单说话人语料的TTS和ASR研究者。</dd><dt>成熟度</dt><dd>早期可用</dd></dl>
+      <div class="card-foot"><div><span class="tag">数据集</span><span class="tag">TTS</span><span class="tag">ASR</span><span class="tag">越南语</span></div><div><a href="https://huggingface.co/datasets/ShiniChien/TTSDistil2">Hugging Face ↗</a><a class="minor-link" href="https://huggingface.co/api/datasets/ShiniChien/TTSDistil2">佐证来源</a></div></div>
+    </article></div></section><footer><span>仅收录可核验来源，不含融资与股价动态。</span><span>生成于 2026-06-19T12:02:19+08:00</span></footer></main></body></html>
